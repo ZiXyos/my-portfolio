@@ -6,7 +6,7 @@ import { UtilityBarComponent } from '../utility/utility.bar';
 
 type NavBarProps = {
 
-    children: ReactNode;
+    children?: ReactNode;
 }
 
 const NavBar = (props : NavBarProps ) => (
