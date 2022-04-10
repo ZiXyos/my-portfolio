@@ -29,10 +29,9 @@ const Layout = ({ children }: LayoutProps) => (
     <>
         <Header />
         <div className="min-h-screen flex-row scroll-smooth md:scroll-auto">
-            <NavBar />
-
-            <main className="min-h-screen bg-purple-600">
-                {children}
+            <main className="min-h-screen bg-desktop bg-cover">
+                <NavBar />
+                    {children}
                 <DockComponent DockItems={itemList}/>
             </main>
 

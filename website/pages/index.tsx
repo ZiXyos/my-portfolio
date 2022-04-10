@@ -26,10 +26,7 @@ const itemList: any[] = [
 const Home: NextPage = () => {
 
   	return (
-		<div>
-			<WindowApp name={'VsCode'} status={false}>
-				<CodeApp />
-			</WindowApp>
+		<div className=''>
     	</div>
   	);
 }

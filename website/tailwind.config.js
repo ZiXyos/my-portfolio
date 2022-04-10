@@ -8,7 +8,7 @@ module.exports = {
     extend: {
       backgroundImage: {
 
-        'desktop': "url('./img/background/thounsand-sunny.jpg')",
+        'desktop': "url('/background/thounsand-sunny.jpg')",
       }
     },
   },
