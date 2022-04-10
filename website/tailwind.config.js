@@ -5,7 +5,12 @@ module.exports = {
     "./components/**/*.{js,ts,jsx,tsx}",
   ],
   theme: {
-    extend: {},
+    extend: {
+      backgroundImage: {
+
+        'desktop': "url('./img/background/thounsand-sunny.jpg')",
+      }
+    },
   },
   plugins: [],
 }

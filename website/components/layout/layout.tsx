@@ -19,8 +19,8 @@ const itemList: any[] = [
     <DockItems name="Sys pref" img='/public/MemojiDev.png' key={2}/>,
     <DockItems name="Mail" img='/public/MemojiDev.png' key={3}/>,
     <DockItems name="Music" img='/public/MemojiDev.png' key={4}/>,
-    <DockItems name="sys pref" img='/public/MemojiDev.png' key={5}/>,
-    <DockItems name="sys pref" img='/public/MemojiDev.png' key={6}/>,
+    <DockItems name="VSCode" img='/public/MemojiDev.png' key={5}/>,
+    <DockItems name="iTerm" img='/public/MemojiDev.png' key={6}/>,
 
 ]
 
@@ -28,15 +28,15 @@ const Layout = ({ children }: LayoutProps) => (
 
     <>
         <Header />
-        <NavBar />
-        <div>
-            <main className="bg-purple-700 min-h-screen">
+        <div className="min-h-screen flex-row scroll-smooth md:scroll-auto">
+            <NavBar />
+
+            <main className="min-h-screen bg-purple-600">
                 {children}
                 <DockComponent DockItems={itemList}/>
             </main>
 
         </div>
-        <Footer />
     </>
 );
 

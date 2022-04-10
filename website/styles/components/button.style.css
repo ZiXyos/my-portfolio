@@ -1,0 +1,7 @@
+@layer components {
+
+    .mac-btn {
+
+        @apply w-10 h-10 rounded-full relative overflow-hidden cursor-pointer
+    }
+}
