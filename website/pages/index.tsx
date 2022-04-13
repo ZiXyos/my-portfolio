@@ -17,6 +17,7 @@ type DataType = {
 	loading: number;
 }
 
+
 let data1: DataType = {
 
 	icon: internet,
@@ -58,9 +59,11 @@ const Home: NextPage = () => {
 
 			<NavBar />
 			<div className={styles.App_comp}>
+
 				<Link href={data.redirect} passHref={true}>
 					<Image src={data.icon} width={100} height={100} className={styles.App_logo} alt={'❤️'}/>
 				</Link>
+
 				<Link href={'https://github.com/ZiXyos'} passHref={true}>
 					<p className={styles.App_intro}>Loading... {data.loading}%</p>
 				</Link>
