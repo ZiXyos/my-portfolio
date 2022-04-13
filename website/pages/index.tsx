@@ -33,7 +33,7 @@ let data2: DataType = {
 	loading: 6.67
 }
 
-let night: DataType = {
+let nightData: DataType = {
 
 	icon: moon,
 	redirect: 'https://www.tf1.fr/tf1/miss-france/news/inscrivez-vous-au-casting-de-miss-france-2022-38417394.html',
@@ -43,32 +43,43 @@ let night: DataType = {
 const Home: NextPage = () => {
 
 	const [data, setData] = useState<DataType>(data1);
+	const [night, setNight] = useState<boolean>(false)
 
 	useEffect(() => {
 
 		let bool = Math.random() < 0.5;
+		bool ? setData(data1) : setData(data2);
 
-		bool ? setData(data1) : setData(data2)
 		const d = new Date();
 		let hour = d.getHours();
 
-		if (hour > 23) setData(night);
-	}, [])
+		if (hour > 23) setNight(true);
+	}, []);
 
   	return (
 		<div className={styles.main}>
 
 			<NavBar />
-			<div className={styles.App_comp}>
+			{
+			night ?
+				<div className={styles.App_comp}>
+					<Link href={data.redirect} passHref={true}>
+						<Image src={data.icon} width={100} height={100} className={styles.App_logo} alt={'❤️'}/>
+					</Link>
 
-				<Link href={data.redirect} passHref={true}>
-					<Image src={data.icon} width={100} height={100} className={styles.App_logo} alt={'❤️'}/>
-				</Link>
+					<Link href={'https://github.com/ZiXyos'} passHref={true}>
+						<p className={styles.App_intro}>Loading... {data.loading}%</p>
+					</Link>
+				</div> : <div className={styles.App_comp}>
+					<Link href={nightData.redirect} passHref={true}>
+						<Image src={nightData.icon} width={100} height={100} className={styles.App_logo} alt={'❤️'}/>
+					</Link>
 
-				<Link href={'https://github.com/ZiXyos'} passHref={true}>
-					<p className={styles.App_intro}>Loading... {data.loading}%</p>
-				</Link>
-			</div>
+					<Link href={'https://github.com/ZiXyos'} passHref={true}>
+						<p className={styles.App_intro}>Loading... {nightData.loading}%</p>
+					</Link>
+				</div>
+			}
     	</div>
   	);
 }
