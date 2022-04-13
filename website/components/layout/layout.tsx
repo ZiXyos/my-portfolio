@@ -6,6 +6,7 @@ import NavBar from "./navbar";
 
 import { DockComponent } from "../dock/dock.component";
 import { DockItems } from '../dock/item.component'
+import { WindowApp } from "../app/window.component";
 
 interface LayoutProps {
 
@@ -15,7 +16,7 @@ interface LayoutProps {
 
 const itemList: any[] = [
 
-    <DockItems name="Finder" img='/public/MemojiDev.png' key={1}/>,
+    <DockItems name="Finder" img='/public/MemojiDev.png' key={1} onClick={() => console.log('EHHH LA MOULA')} />,
     <DockItems name="Sys pref" img='/public/MemojiDev.png' key={2}/>,
     <DockItems name="Mail" img='/public/MemojiDev.png' key={3}/>,
     <DockItems name="Music" img='/public/MemojiDev.png' key={4}/>,

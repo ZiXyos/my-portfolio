@@ -1,15 +1,7 @@
 import type { NextPage } from 'next';
-import Head from 'next/head';
-import Image from 'next/image';
-import styles from '../styles/Home.module.css';
 
-import Button from '../components/button/basic_buttons';
-import Layout from '../components/layout/layout';
-import Tags from '../components/tags/tags';
 import { WindowApp } from '../components/app/window.component';
-import { ResizableDiv } from '../components/div/resizable.component';
 import { CodeApp } from '../components/app/code/code.app';
-import { DockComponent } from '../components/dock/dock.component';
 import { DockItems } from '../components/dock/item.component';
 
 const itemList: any[] = [
@@ -26,7 +18,8 @@ const itemList: any[] = [
 const Home: NextPage = () => {
 
   	return (
-		<div className=''>
+		<div>
+			{}
     	</div>
   	);
 }

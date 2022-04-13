@@ -1,6 +1,5 @@
-import { FunctionComponent } from "react";
+import { FunctionComponent, useEffect, useState } from "react";
 import { TopBarComponent } from "./topbar.component";
-
 
 type WindowProps = {
 
@@ -10,6 +9,8 @@ type WindowProps = {
 }
 
 export const WindowApp: FunctionComponent<WindowProps> = ({ name, status, children }: WindowProps) => {
+
+    const [appStatus, setAppStatus] = useState();
 
     return (
 
