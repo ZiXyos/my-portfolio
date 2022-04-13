@@ -13,7 +13,6 @@ const Layout = ({ children }: LayoutProps) => (
 
     <>
         <Header />
-        <NavBar />
         <main>
             {children}
         </main>
