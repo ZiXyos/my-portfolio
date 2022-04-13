@@ -18,6 +18,7 @@ type DataType = {
 }
 
 
+
 let data1: DataType = {
 
 	icon: internet,
