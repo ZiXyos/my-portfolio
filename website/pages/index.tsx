@@ -55,8 +55,6 @@ const Home: NextPage = () => {
 		if (hour > 0 && hour < 5) setNight(true);
 	}, []);
 
-	console.log(night);
-
   	return (
 		<div className={styles.main}>
 
