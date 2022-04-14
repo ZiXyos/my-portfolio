@@ -52,31 +52,33 @@ const Home: NextPage = () => {
 
 		const d = new Date();
 		let hour = d.getHours();
-
-		if (hour > 23) setNight(true);
+		if (hour > 0 && hour < 5) setNight(true);
 	}, []);
+
+	console.log(night);
 
   	return (
 		<div className={styles.main}>
 
 			<NavBar />
 			{
+
 			night ?
 				<div className={styles.App_comp}>
-					<Link href={data.redirect} passHref={true}>
-						<Image src={data.icon} width={100} height={100} className={styles.App_logo} alt={'❤️'}/>
-					</Link>
-
-					<Link href={'https://github.com/ZiXyos'} passHref={true}>
-						<p className={styles.App_intro}>Loading... {data.loading}%</p>
-					</Link>
-				</div> : <div className={styles.App_comp}>
 					<Link href={nightData.redirect} passHref={true}>
 						<Image src={nightData.icon} width={100} height={100} className={styles.App_logo} alt={'❤️'}/>
 					</Link>
 
 					<Link href={'https://github.com/ZiXyos'} passHref={true}>
 						<p className={styles.App_intro}>Loading... {nightData.loading}%</p>
+					</Link>
+				</div> : <div className={styles.App_comp}>
+					<Link href={data.redirect} passHref={true}>
+						<Image src={data.icon} width={100} height={100} className={styles.App_logo} alt={'❤️'}/>
+					</Link>
+
+					<Link href={'https://github.com/ZiXyos'} passHref={true}>
+						<p className={styles.App_intro}>Loading... {data.loading}%</p>
 					</Link>
 				</div>
 			}
